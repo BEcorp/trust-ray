@@ -8,7 +8,7 @@
     },
     "RPC_SERVER": {
       "description": "RPC URL of your blockchain node.",
-      "value": "http://127.0.0.1:8545"
+      "value": "http://localhost:8545"
     }
   }
 }

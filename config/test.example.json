@@ -3,6 +3,7 @@
         "URI": "FILL_ME_IN"
     },
     "RPC_SERVER": "FILL_ME_IN",
+    "BASE_URI": "FILL_ME_IN",
     "NETWORK_SYMBOL": "FILL_ME_IN",
     "PUSHER": {
         "APN": {

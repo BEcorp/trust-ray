@@ -3,6 +3,7 @@
         "URI": "mongodb://localhost:27017/trust-wallet"
     },
     "RPC_SERVER": "http://127.0.0.1:8545",
+    "BASE_URI": "/trust/",
     "NETWORK_SYMBOL": "ETH",
     "PUSHER": {
         "APN": {

@@ -10,7 +10,7 @@ import * as winston from "winston";
 
 const config = require("config");
 const cors = require("cors");
-const compression = require("compression")
+const compression = require("compression");
 const port = process.env.PORT || 8000;
 
 export class App {
@@ -34,6 +34,8 @@ export class App {
 
         // eventually start
         this.launch();
+
+        winston.info("RPC Server : " + config.get("RPC_SERVER"));
     }
 
 
@@ -62,12 +64,14 @@ export class App {
     }
 
     private setupDatabase() {
-        this.db = new Database(config.get("MONGO.URI"));
+        const mongo_uri = config.get("MONGO.URI");
+        this.db = new Database(mongo_uri);
         this.db.connect();
+        winston.info(("Mongo is running at %s"), mongo_uri);
     }
 
     private addRoutes() {
-        this.app.use("/", router);
+        this.app.use(config.get("BASE_URI"), router);
     }
 
     private launch() {

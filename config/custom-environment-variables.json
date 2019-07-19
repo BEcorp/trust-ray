@@ -3,6 +3,7 @@
         "URI": "MONGODB_URI"
     },
     "RPC_SERVER": "RPC_SERVER",
+    "BASE_URI": "BASE_URI",
     "NETWORK_SYMBOL": "NETWORK_SYMBOL",
     "PUSHER": {
         "APN": {
